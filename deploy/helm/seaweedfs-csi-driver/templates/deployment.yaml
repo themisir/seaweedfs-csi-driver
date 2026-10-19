@@ -3,6 +3,7 @@ kind: Deployment
 apiVersion: apps/v1
 metadata:
   name: {{ template "seaweedfs-csi-driver.name" . }}-controller
+  namespace: {{ template "seaweedfs-csi-driver.namespace" . }}
 spec:
   selector:
     matchLabels:
